@@ -22,35 +22,31 @@ The only requirement to use this Javascript i18n Localizer is to use **RequireJS
 
 * ###NodeJS###
      You can install RequireJS with **npm** :  `npm install requirejs`.
-
      Then, in your `index.js` file or wherever, you must setup the **RequireJS config** :
-      `var requirejs = require('requirejs');
-      requirejs.config({ nodeRequire: require });`
+      var requirejs = require('requirejs');
+      requirejs.config({ nodeRequire: require });
 
 ## Usage ##
 This module cant be used in a Browser Javascript application or with NodeJS (in both scenarios using)
 
-* #### Web app  ####
-	* HTML (just include your main loader `script` tag):
-
-           `<script data-main="main_browser" src="require.js"></script>`
-
+*	#### Web app  ####
+	* HTML (just include your main loader `script` tag).
+           <script data-main="main_browser" src="require.js"></script>
 	* `main_browser.js` : 
-
-           `require(["i18n/Localizer"], function (Localizer) {
+           require(["i18n/Localizer"], function (Localizer) {
                var localizer = new Localizer(); // default locale 'en'
     	       localizer.validateLiterals();
    	        console.log(localizer.get("hello_world"));
-           });`
+           });
        
-* #### NodeJS ####
+*	#### NodeJS ####
         * `main_node.js` :
          
-              `requirejs(["i18n/Localizer"], function (Localizer) {
+              requirejs(["i18n/Localizer"], function (Localizer) {
                   var localizer = new Localizer();
                   localizer.validateLiterals();
                   console.log(localizer.get("hello_world"));
-              });`
+              });
          
 ## Test ##
 
